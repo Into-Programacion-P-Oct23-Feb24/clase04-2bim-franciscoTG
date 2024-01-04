@@ -13,27 +13,32 @@ public class Ejemplo041 {
 
     public static void main(String[] args) {
         // 
-        int[][]arreglo1={{1,2,3},{3,2,4},{2,6,2}};
-        int[][]arreglo2={{1,2,3},{2,2,2},{3,1,2}};
-        int[][]arreglo3=new int[3][3];
-        for (int i=0;i<arreglo1.length;i++){
-            for (int j=0;j<arreglo1[i].length;j++){
-                arreglo3[i][j]=obtenerMultiplicacion(arreglo1[i][j]
-                        ,arreglo2[i][j]);
+        String cadenaFinal = "";
+        int[][] arreglo1 = {{1, 2, 3}, {3, 2, 4}, {2, 6, 2}};
+        int[][] arreglo2 = {{1, 2, 3}, {2, 2, 2}, {3, 1, 2}};
+        int[][] arreglo3 = new int[3][3];
+
+        for (int i = 0; i < arreglo1.length; i++) {
+            for (int j = 0; j < arreglo1[i].length; j++) {
+                arreglo3[i][j] = obtenerMultiplicacion(arreglo1[i][j], arreglo2[i][j]);
             }
         }
-        obtenerMultiplicacion(primerValor, segundoValor);
+        for (int i = 0; i < arreglo1.length; i++) {
+            for (int j = 0; j < arreglo1[i].length; j++) {
+                System.out.printf(" %s %d", cadenaFinal, arreglo3[i][j]);
+                if (j == 2) {
+                    System.out.print("\n");
+                }
+            }
+        }
 
     }
 
-    public static void obtenerMultiplicaion(int a, int b) {
-        int valor1 = 4;
-        int valor2 = 5;
-        int operacion;
-        operacion = a * b;
-        return operacion;
+    public static int obtenerMultiplicacion(int a, int b) {
+        int multiplicacion;
+        multiplicacion = a * b;
+        return multiplicacion;
     }
 
 }
-//
 
