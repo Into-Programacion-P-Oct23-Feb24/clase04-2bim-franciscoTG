@@ -18,15 +18,17 @@ public class Ejemplo041 {
         int[][] arreglo2 = {{1, 2, 3}, {2, 2, 2}, {3, 1, 2}};
         int[][] arreglo3 = new int[3][3];
 
-        for (int i = 0; i < arreglo1.length; i++) {
-            for (int j = 0; j < arreglo1[i].length; j++) {
-                arreglo3[i][j] = obtenerMultiplicacion(arreglo1[i][j], arreglo2[i][j]);
+        for (int f = 0; f < arreglo1.length; f++) {
+            for (int c = 0; c < arreglo1[f].length; c++) {
+                arreglo3[f][c] = obtenerMultiplicacion(arreglo1[f][c],
+                        arreglo2[f][c]);
             }
         }
-        for (int i = 0; i < arreglo1.length; i++) {
-            for (int j = 0; j < arreglo1[i].length; j++) {
-                System.out.printf(" %s %d", cadenaFinal, arreglo3[i][j]);
-                if (j == 2) {
+        for (int f = 0; f < arreglo1.length; f++) {
+            for (int c = 0; c < arreglo1[f].length; c++) {
+                System.out.printf(" %s %d", cadenaFinal, 
+                        arreglo3[f][c]);
+                if (c == 2) {
                     System.out.print("\n");
                 }
             }
@@ -41,4 +43,5 @@ public class Ejemplo041 {
     }
 
 }
+
 
